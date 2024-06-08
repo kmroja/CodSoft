@@ -1,0 +1,89 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: flex-start; /* Aligns the calculator to the left */
+    align-items: center; /* Vertically centers the calculator */
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-photo/top-view-desk-concept-with-notepad_23-2148604955.jpg?w=900&t=st=1717760356~exp=1717760956~hmac=8c7d9776feaa8963cea02c0b517c3cf5df4a052df8dacb636b5c06e919177502.jpg');
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-left: 250px; /* Optional: adds some padding from the left edge */
+}
+
+.calculator {
+    border: 1px solid #5f5a5a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: rgba(67, 63, 63, 0.9);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#display {
+    width: 95%;
+    height: 50px;
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background-color:white;
+    border-radius: 5px;
+    color:black
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.5em;
+    background-color: #f14242;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d0d0d0;
+}
+
+
+/* Media queries for mobile devices */
+@media (max-width: 767px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .calculator {
+        margin-top: 200px;
+        max-width: 90%; /* Adjust the width for mobile screens */
+        padding: 10px;  /* Reduce padding for mobile screens */
+    }
+
+    #display, #answer {
+        height: 40px;   /* Reduce height for mobile screens */
+        font-size: 1.5em; /* Reduce font size for mobile screens */
+    }
+
+    button {
+        padding: 15px;  /* Reduce padding for mobile screens */
+        font-size: 1.2em; /* Reduce font size for mobile screens */
+    }
+
+    .buttons {
+        gap: 5px; /* Reduce gap between buttons for mobile screens */
+    }
+}
